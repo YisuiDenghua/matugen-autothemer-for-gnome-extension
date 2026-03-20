@@ -10,9 +10,11 @@
 
 Before installing, ensure you have the following tools installed. **The extension will not work without them.**
 
+> **⚠️ matugen Version Warning**: matugen **4.0.0 and above** introduced an interactive accent color source selection prompt in the CLI. This interactive prompt will **interrupt and break** the extension's scripts. You **must** use a matugen version that is **>= 3.0.0 and < 4.0.0**.
+
 | Dependency | Description |
 | :--- | :--- |
-| **matugen(3.0.0 or later)**  | **CRITICAL.** The core color generation tool. |
+| **matugen(>=3.0.0, <4.0.0)**  | **CRITICAL.** The core color generation tool. Versions 4.0.0+ are **not supported** due to a breaking interactive CLI change. |
 | **sassc** | Required to compile the GNOME Shell theme. |
 | **libjxl (djxl)**| Required **only** if you use `.jxl` (JPEG XL) wallpapers. |
 | **adw-gtk3** | Theme for legacy GTK applications. |
@@ -80,9 +82,11 @@ After installing the extension, you must configure your system to use the genera
 
 安装前请确保您的系统满足以下要求，**否则插件将无法运行**：
 
+> **⚠️ matugen 版本警告**：matugen **4.0.0 及以上版本**在命令行中引入了交互式选择重点色来源的功能（交互式提示），这会**中断本插件的脚本执行并导致报错**。请务必使用 **>= 3.0.0 且 < 4.0.0** 的 matugen 版本。
+
 | 依赖软件 | 说明 |
 | :--- | :--- |
-| **matugen(3.0.0或更高版本)** | **必须。** 核心配色生成工具，版本过低将报错。 |
+| **matugen(>=3.0.0, <4.0.0)** | **必须。** 核心配色生成工具。**4.0.0 及以上版本因引入交互式 CLI 变更而不兼容，会导致脚本中断报错。** |
 | **sassc** | **必须。** 用于编译 GNOME Shell 主题样式表。 |
 | **libjxl (djxl)**| **可选。** 仅当您使用 `.jxl` 格式壁纸时需要。 |
 | **adw-gtk3** | 用于统一传统 GTK 应用的样式。 |
